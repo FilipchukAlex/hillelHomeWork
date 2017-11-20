@@ -6,7 +6,7 @@ upper_bound = -4
 
 
 def find_max(num_limit, lower_bound, upper_bound):
-    max_number = random.randint(lower_bound, upper_bound)
+    max_number = lower_bound
     for i in range(num_limit):
         number = random.randint(lower_bound, upper_bound)
         if number >= max_number:
