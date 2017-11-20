@@ -1,6 +1,10 @@
 import math
-x1 = 0; y1 = 7; r1 = 4
-x2 = 0; y2 = 0; r2 = 4
+x1 = 0
+y1 = 7
+r1 = 4
+x2 = 0
+y2 = 0
+r2 = 4
 
 
 def intersection_of_two_circles(x1, y1, r1, x2, y2, r2):
