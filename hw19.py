@@ -6,11 +6,12 @@ upper_bound = 280
 
 
 def find_max(num_limit, lower_bound, upper_bound):
-    list_of_numbers = []
+    max_number = 0
     for i in range(num_limit):
         number = random.randint(lower_bound, upper_bound)
-        list_of_numbers.append(number)
-    return max(list_of_numbers)
+        if number >= max_number:
+            max_number = number
+    return max_number
 
 
 print(find_max(num_limit, lower_bound, upper_bound))
