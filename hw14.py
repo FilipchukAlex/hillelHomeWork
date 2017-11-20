@@ -1,11 +1,11 @@
-number = 55
+number = 56
 
 
 def is_even(number):
-    if number % 2 == 0:
-        print("The number %d is even" % number)
-    else:
-        print("The number %d is not even" % number)
+    return number % 2 == 0
 
 
-is_even(number)
+if is_even(number):
+    print("The number %d is even" % number)
+else:
+    print("The number %d is not even" % number)
