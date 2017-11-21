@@ -9,10 +9,10 @@ if a != 0:
         import math
         discrim = b**2 - 4 * a * c
         if discrim > 0:
-            x1 = (-b + math.sqrt(discrim)) / (2 * a)
-            x2 = (-b - math.sqrt(discrim)) / (2 * a)
+            x1 = round(((-b + math.sqrt(discrim)) / (2 * a)), 2)
+            x2 = round(((-b - math.sqrt(discrim)) / (2 * a)), 2)
         elif discrim == 0:
-            x1 = -b / (2 * a)
+            x1 = round((-b / (2 * a)), 2)
             x2 = None
         else:
             x1 = x2 = None
