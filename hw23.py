@@ -12,3 +12,4 @@ while user_number != comp_number:
         user_number = int(input("Enter the number:"))
 else:
     print("Yes, it is %d" % comp_number)
+    print(input("Press Enter to quit"))
