@@ -6,16 +6,15 @@ def group_by_surname(list_of_enrollees):
     for student in list_of_enrollees:
         students.append(student.split(' '))
     surnames = [element[1] for element in students]
-    surnames_titles = [surname[0] for surname in surnames]
     group1 = group2 = group3 = group4 = 0
-    for title in surnames_titles:
-        if 'A' <= title.upper()  <= 'I':
+    for title in surnames:
+        if 'A' <= title[0].upper()  <= 'I':
             group1 += 1
-        if 'J' <= title.upper() <= 'P':
+        elif 'J' <= title[0].upper() <= 'P':
             group2 += 1
-        if 'Q' <= title.upper() <= 'T':
+        elif 'Q' <= title[0].upper() <= 'T':
             group3 += 1
-        if 'U' <= title.upper() <= 'Z':
+        else:
             group4 += 1
     return  group1, group2, group3, group4
 
