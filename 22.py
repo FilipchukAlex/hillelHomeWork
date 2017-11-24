@@ -1,18 +1,16 @@
 list_of_enrollees = ['Vasya Pupkin', 'Aleksandr pushkin', \
                      'Black Cat', 'Mark Zukerberg', 'Chuck norris']
 
+
 def group_by_surname(list_of_enrollees):
-    students = []
-    for student in list_of_enrollees:
-        students.append(student.split(' '))
-    surnames = [element[1] for element in students]
     group1 = group2 = group3 = group4 = 0
-    for title in surnames:
-        if 'A' <= title[0].upper()  <= 'I':
+    for student in list_of_enrollees:
+        first_surname_letter = student.split(' ')[1][0]
+        if 'A' <= first_surname_letter.upper()  <= 'I':
             group1 += 1
-        elif 'J' <= title[0].upper() <= 'P':
+        elif 'J' <= first_surname_letter.upper() <= 'P':
             group2 += 1
-        elif 'Q' <= title[0].upper() <= 'T':
+        elif 'Q' <= first_surname_letter.upper() <= 'T':
             group3 += 1
         else:
             group4 += 1
