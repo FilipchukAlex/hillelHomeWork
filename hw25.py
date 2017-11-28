@@ -6,9 +6,7 @@ def shuffle_list(list_to_shuffle):
     k = 0
     for i in range(50):
         n = random.randint(k, 49)
-        number = list_to_shuffle[n]
-        list_to_shuffle.remove(number)
-        list_to_shuffle.insert(0, number)
+        list_to_shuffle.insert(0, list_to_shuffle.pop(n))
         k += 1
     return list_to_shuffle
 
