@@ -7,7 +7,7 @@ def encode(str_to_encode):
     list_to_encode = [symbol for symbol in str_to_encode.lower()]
     for index, symbol in enumerate(list_to_encode):
         if symbol in encryption_table:
-            list_to_encode[index] = (encryption_table[encryption_table.find(symbol) - len(encryption_table) + 5])
+            list_to_encode[index] = encryption_table[(encryption_table.find(symbol) + 5) % len(encryption_table)]
         else:
             list_to_encode[index] = symbol
     return ''.join(list_to_encode)
