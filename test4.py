@@ -9,5 +9,3 @@ while True:
     if number == 'q':
         print("Come again...")
         break
-    else:
-        continue
