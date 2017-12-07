@@ -4,7 +4,7 @@ lst_random = [random.randint(-10, 10) for i in range(6)]
 
 
 def normalize_lst(lst):
-    max_abs_lst = max([abs(number) for number in lst])
+    max_abs_lst = abs(max(lst, key=abs))
     for i, element in enumerate(lst):
         lst[i] = round((element / max_abs_lst), 1)
     #print(lst, id(lst))
