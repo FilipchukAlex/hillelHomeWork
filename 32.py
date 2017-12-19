@@ -29,11 +29,8 @@ def update_students_results(group, hw_results, test1_results, test1_weights):
 
 #------------------------------------------------------------------------------
 def print_students_info(group, sort_by_key = "fullname"):
-
-    list_dicts = group
-    list_dicts.sort(key=lambda elem: elem['rank'])
-
-    for dict in list_dicts:
+    group.sort(key=lambda elem: elem[sort_by_key])
+    for dict in group:
         print("-----------------------------------------")
         print("| ID:    %30s |"        % dict['id'])
         print("| Fullname:   %25s |"   % dict['fullname'])
