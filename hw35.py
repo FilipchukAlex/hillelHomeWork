@@ -21,7 +21,7 @@ class Vehicle:
 
 
 class Train(Vehicle):
-
+    MIN_SPEED_SEGMENT = 15
 
     def __init__(self, name, type_of_a_vehicle, source_of_energy, average_speed_of_movement, number_of_seats_for_passengers):
         super().__init__(name, type_of_a_vehicle, source_of_energy, average_speed_of_movement)
@@ -31,6 +31,16 @@ class Train(Vehicle):
     def print_info(self):
         super().print_info()
         print('Number of seats for passengers %d' % self.number_of_seats_for_passengers)
+
+    # АУДиТ (Автоматическое управление движением и торможением) http://metroblog.ru/post/3575/
+    def set_speed(self, speed):
+        import random
+        allowed_road_speed = random.randint(self.MIN_SPEED_SEGMENT, self.average_speed_of_movement)
+        speed = int(input('\nPlease, set a speed: '))
+        if speed < allowed_road_speed:
+            print('Setting speed %d' % speed)
+        else:
+            print('WARNING!!! Emergency breaking! ')
 
 
 class Airplane(Vehicle):
@@ -44,6 +54,11 @@ class Airplane(Vehicle):
         super().print_info()
         print('Maximum flight altitude: %d m.' % self.maximum_flight_altitude)
 
+    def oxygen_masks(self):
+        if True:
+            print('\nOxygen masks have dropped out...')
+
+
 
 train1 = Train('Train123', 'land vehicle', 'electricity', 80, 700,)
 train1.print_info()
@@ -52,3 +67,6 @@ train1.delivery_time_by_distance(120)
 airplane1 = Airplane('Boing','air vihicle','fuel', 850, 9000)
 airplane1.print_info()
 airplane1.delivery_time_by_distance(450)
+
+train1.set_speed(65)
+airplane1.oxygen_masks()
