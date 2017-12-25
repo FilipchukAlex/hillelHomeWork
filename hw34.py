@@ -14,8 +14,8 @@ class Circle(Shape):
         self.radius = radius
 
 
-    def is_point_inside_circle(self, Point):
-        print((Point.x - self.x)**2 + (Point.y - self.y)**2 <= self.radius**2)
+    def is_point_inside_circle(self, point):
+        print((point.x - self.x)**2 + (point.y - self.y)**2 <= self.radius**2)
 
 
 
@@ -28,6 +28,6 @@ class Point(Shape):
         super().__init__(x, y)
 
 
-point1 = Point(1, 5)
-circle1 = Circle(2, 4, 1)
+point1 = Point(4, 5)
+circle1 = Circle(2,3, 7)
 circle1.is_point_inside_circle(point1)
