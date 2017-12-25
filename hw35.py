@@ -54,8 +54,7 @@ class Airplane(Vehicle):
         print('Maximum flight altitude: %d m.' % self.maximum_flight_altitude)
 
     def oxygen_masks(self):
-        if True:
-            print('\nOxygen masks have dropped out...')
+        print('\nOxygen masks have dropped out...')
 
 
 
