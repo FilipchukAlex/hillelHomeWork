@@ -36,11 +36,10 @@ class Train(Vehicle):
     def set_speed(self, speed):
         import random
         allowed_road_speed = random.randint(self.MIN_SPEED_SEGMENT, self.average_speed_of_movement)
-        speed = int(input('\nPlease, set a speed: '))
         if speed < allowed_road_speed:
             print('Setting speed %d' % speed)
         else:
-            print('WARNING!!! Emergency breaking! ')
+            raise ValueError('Incorrect speed: exceeded allowed limit')
 
 
 class Airplane(Vehicle):
@@ -68,5 +67,5 @@ airplane1 = Airplane('Boing','air vihicle','fuel', 850, 9000)
 airplane1.print_info()
 airplane1.delivery_time_by_distance(450)
 
-train1.set_speed(65)
+train1.set_speed(56)
 airplane1.oxygen_masks()
